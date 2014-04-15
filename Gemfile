@@ -4,14 +4,18 @@ source 'http://rubygems.org'
 
 gem 'middleman', '~> 3.3.2'
 gem 'middleman-blog', '~> 3.5.2'
+gem "middleman-syntax"
 # For deploy
 gem 'middleman-deploy'
 
-# Using slim
+# Use slim
 gem 'slim'
 
 # For markdown
 gem 'redcarpet'
+
+# Use Nokogiri
+gem 'nokogiri'
 
 # For minify html
 gem 'middleman-minify-html'
