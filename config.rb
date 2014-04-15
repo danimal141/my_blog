@@ -6,7 +6,7 @@ Time.zone = "Tokyo"
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  blog.prefix = "blog"
+  blog.prefix = "posts"
 
   # blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
@@ -86,9 +86,8 @@ set :images_dir, 'images'
 
 set :slim, { pretty: true, sort_attrs: false, format: :html5 }
 
-set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, with_toc_data: true, smartypants: true
-
 set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true, tables: true
 
 # Build-specific configuration
 configure :build do
@@ -100,6 +99,9 @@ configure :build do
 
   # Minify HTML
   activate :minify_html, remove_quotes: false, remove_intertag_spaces: true
+
+  # Syntax line_numbers: true
+  activate :syntax, line_numbers: true
 
   # Enable cache buster
   # activate :asset_hash

@@ -3,6 +3,7 @@ pageable: true
 per_page: 12
 layout: layout
 ---
+
 h2
   | tag '
   = tagname
@@ -19,10 +20,10 @@ h2
 
 - page_articles.each_with_index do |article, i|
   article
-    .article-header
+    div
       h2 = link_to article.title, article
       time datetime= article.date.strftime('%Y-%m-%d') = article.date.strftime('%B %e, %Y')
-      ul.article-tags
+      ul
         - article.tags.each do |tag|
           li
             = link_to tag, tag_path(tag)
