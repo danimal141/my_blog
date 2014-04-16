@@ -10,8 +10,10 @@ tags: example
 - さんぷる
 - さんぷる
 
+### サンプルコード
+
 ```ruby
-    def hoge
-      'hoge'
-    end
+def my_cool_method(message)
+  puts message
+end
 ```

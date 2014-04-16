@@ -1,0 +1,24 @@
+/**
+*
+* Typography, Font
+*
+*/
+
+$font-family-base: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+$font-size-base: 13px;
+$font-size-x-large: $font-size-base + 5px;
+$font-size-large: $font-size-base + 3px;
+$font-size-x-small: $font-size-base - 5px;
+$font-size-small: $font-size-base - 3px;
+$line-height-base: 1.4;
+
+/**
+*
+* Color
+*
+*/
+
+$color-base-1: #fff;
+$color-base-2: #f5f5f5;
+$color-main-1: #000;
+$color-main-2: #3d3d3d;

@@ -24,7 +24,7 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
+  blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
 end
@@ -71,6 +71,9 @@ page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
 activate :livereload
 
+# Syntax
+activate :syntax
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -87,7 +90,7 @@ set :images_dir, 'images'
 set :slim, { pretty: true, sort_attrs: false, format: :html5 }
 
 set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, smartypants: true, tables: true
+set :markdown, fenced_code_blocks: true, smartypants: true
 
 # Build-specific configuration
 configure :build do
@@ -99,9 +102,6 @@ configure :build do
 
   # Minify HTML
   activate :minify_html, remove_quotes: false, remove_intertag_spaces: true
-
-  # Syntax line_numbers: true
-  activate :syntax, line_numbers: true
 
   # Enable cache buster
   # activate :asset_hash
