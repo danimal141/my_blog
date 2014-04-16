@@ -4,26 +4,20 @@ per_page: 10
 ---
 
 - if paginate
-  p
-    | Page #{page_number} of #{num_pages}
+  p =  "Page #{page_number} of #{num_pages}"
   - if prev_page
-    p
-      = link_to 'Previous page', prev_page
+    p = link_to 'Previous page', prev_page
+
 - page_articles.each_with_index do |article, i|
   article
-    div
-      h2
-        = link_to article.title, article
-      time datetime= article.date.strftime('%Y-%m-%d') = article.date.strftime('%B %e, %Y')
-      ul
-        - article.tags.each do |tag|
-          li
-            = link_to tag, tag_path(tag)
-    div
-      = article.summary
-    p
-      = link_to 'Read more', article
+    h2 = link_to article.title, article
+    time datetime= article.date.strftime('%Y-%m-%d') = article.date.strftime('%B %e, %Y')
+    ul
+      - article.tags.each do |tag|
+        li = link_to tag, tag_path(tag)
+    div = article.summary
+    p = link_to 'Read more', article
+
 - if paginate
   - if next_page
-    p
-      = link_to 'Next page', next_page
+    p = link_to 'Next page', next_page
