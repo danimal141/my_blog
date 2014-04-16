@@ -1,4 +1,4 @@
-@import './globals/all';
+@import 'globals/all';
 
 %reset-margin {
   margin: 0;
@@ -14,30 +14,35 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   padding: 10px;
-  border-bottom: 1px dotted $color-main-3;
+  border-bottom: 1px dotted $color-main3;
 }
 
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  background: $color-base-2;
-  color: $color-main-1;
+  background: $sol-base3;
+  color: $sol-base01;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
 }
 
+ul {
+  padding-left: 20px;
+}
+
 li {
-  list-style: none;
+  margin: 10px 0;
 }
 
 a {
+  color: $sol-blue;
   text-decoration: none;
 }
 
 pre {
   padding: 20px;
   background: #3d3d3d;
-  color: $color-base-2;
+  color: $color-base2;
 }
 
