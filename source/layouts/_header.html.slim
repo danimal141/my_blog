@@ -1,2 +1,10 @@
-header
-  h1 一から勉強させてください(￣ω￣;)
+header.gl-header
+  h1 = link_to '一から勉強させてください(￣ω￣;)', '/'
+  nav
+    ul.gl-header__link
+      li.gl-header__link__item
+        = link_to 'https://twitter.com/d_animal141', target: '_blank'  do
+          img src=image_path('icon_twitter.png') alt='twitter'
+      li.gl-header__link__item
+        = link_to 'https://github.com/dangerousanimal', target: '_blank' do
+          img src=image_path('icon_github.png') alt='github'
