@@ -12,12 +12,8 @@ html, body {
   height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  padding: 10px;
-  border-bottom: 1px dotted $color-main3;
-}
-
 body {
+  @extend %reset-margin, %reset-padding;
   font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
@@ -27,12 +23,8 @@ body {
   -webkit-user-select: none;
 }
 
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin: 10px 0;
+h1, h2, h3, h4, h5, h6 {
+  @extend %reset-margin;
 }
 
 a {

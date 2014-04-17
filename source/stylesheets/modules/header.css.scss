@@ -1,0 +1,10 @@
+@import 'globals/all';
+
+header {
+  background: $sol-base03;
+  color: $sol-base3;
+  h1 {
+    margin-left: 5%;
+    font-size: $font-size-x-large;
+  }
+}
