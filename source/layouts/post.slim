@@ -4,13 +4,13 @@ html
     meta charset="UTF-8"
     meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     meta name="format-detection" content="telephone=no"
-    title Learn from scratch
+    title danimal141.net
     = stylesheet_link_tag 'application', media: 'all'
 
   body
     = partial 'layouts/header'
     div.l-container
-      div.post
+      div.article
         h2 = current_article.title
         div.article__info.cf
           time.article__date.fl datetime= current_article.date.strftime('%Y-%m-%d')
@@ -18,5 +18,6 @@ html
           ul.article__tags.fr
             - current_article.tags.each do |tag|
               li.fl = link_to tag, tag_path(tag)
-        = yield
+        div.entry
+          = yield
     = partial 'layouts/footer'

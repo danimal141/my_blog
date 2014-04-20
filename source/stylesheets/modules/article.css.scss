@@ -3,17 +3,17 @@
 .article {
   padding: 10px;
   &:not(:first-child) {
-    margin-top: 30px;
+    margin-top: 2rem;
   }
 }
 .article__info {
-  margin-top: 10px;
+  margin-top: 1.0rem;
 }
 .article__title {
-  font-size: $font-size-large;
+  font-size: 1.2rem;
 }
 .article__date {
-  font-size: $font-size-small;
+  font-size: 0.8rem;
   color: $sol-base0;
 }
 .article__tags {

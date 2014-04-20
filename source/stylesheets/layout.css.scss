@@ -1,11 +1,12 @@
 @import 'globals/all';
 
 .l-container {
-  width: 80%;
+  width: 90%;
   max-width: 720px;
-  margin: 30px auto;
+  margin: 2rem auto;
 }
 
+// helper classes
 .cf {
   &::after {
     content: '';
