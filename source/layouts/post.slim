@@ -10,5 +10,13 @@ html
   body
     = partial 'layouts/header'
     div.l-container
-      = yield
+      div.post
+        h2 = current_article.title
+        div.article__info.cf
+          time.article__date.fl datetime= current_article.date.strftime('%Y-%m-%d')
+            = current_article.date.strftime('%B %e, %Y')
+          ul.article__tags.fr
+            - current_article.tags.each do |tag|
+              li.fl = link_to tag, tag_path(tag)
+        = yield
     = partial 'layouts/footer'

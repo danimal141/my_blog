@@ -1,0 +1,31 @@
+@import 'globals/all';
+
+.article {
+  padding: 10px;
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+.article__info {
+  margin-top: 10px;
+}
+.article__title {
+  font-size: $font-size-large;
+}
+.article__date {
+  font-size: $font-size-small;
+  color: $sol-base0;
+}
+.article__tags {
+  @extend .article__date;
+  margin: 0;
+  li {
+    list-style: none;
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+  a {
+    color: inherit;
+  }
+}

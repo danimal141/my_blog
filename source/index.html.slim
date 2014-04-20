@@ -1,22 +1,24 @@
 ---
 pageable: true
-per_page: 10
+per_page: 8
+layout: layout
 ---
 
-- if paginate
-  - if prev_page
-    p = link_to 'Previous page', prev_page
-
 - page_articles.each_with_index do |article, i|
-  article
-    h2 = link_to article.title, article
-    time datetime= article.date.strftime('%Y-%m-%d') = article.date.strftime('%B %e, %Y')
-    ul
-      - article.tags.each do |tag|
-        li = link_to tag, tag_path(tag)
-    div = article.summary
-    p = link_to 'Read more', article
+  article.article
+    h2.article__title = link_to article.title, article
+    div.article__info.cf
+      time.article__date.fl datetime= article.date.strftime('%Y-%m-%d')
+        = article.date.strftime('%B %e, %Y')
+      ul.article__tags.fr
+        - article.tags.each do |tag|
+          li.fl = link_to tag, tag_path(tag)
+    /div = article.summary
+    /p = link_to 'Read more', article
 
 - if paginate
-  - if next_page
-    p = link_to 'Next page', next_page
+  div.paginate.cf
+    - if prev_page
+      p.paginate__parts.fl = link_to 'Previous', prev_page
+    - if next_page
+      p.paginate__parts.fr= link_to 'Next', next_page

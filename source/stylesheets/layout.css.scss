@@ -2,5 +2,23 @@
 
 .l-container {
   width: 80%;
+  max-width: 720px;
   margin: 30px auto;
+}
+
+.cf {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.cb {
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
 }
