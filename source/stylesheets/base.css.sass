@@ -1,0 +1,41 @@
+@import 'globals/all'
+
+%reset-margin
+  margin: 0
+
+%reset-padding
+  padding: 0
+
+
+html, body
+  width: 100%
+
+body
+  @extend %reset-margin, %reset-padding
+  line-height: $line-height-base
+  font:
+    family: $font-family-base
+    size: $font-size-base
+  background: $color-base3
+  color: $sol-base01
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+
+h1, h2, h3, h4, h5, h6
+  @extend %reset-margin, %reset-padding
+
+a
+  color: $sol-blue
+  text-decoration: none
+  &:hover
+    color: $sol-yellow
+    text-decoration: underline
+
+p
+  word-wrap: break-word
+
+pre
+  padding: 20px
+  word-wrap: break-word
+  background: #3d3d3d
+  color: $color-base2

@@ -13,12 +13,10 @@ layout: layout
       ul.article__tags.fr
         - article.tags.each do |tag|
           li.fl = link_to tag, tag_path(tag)
-    /div = article.summary
-    /p = link_to 'Read more', article
 
 - if paginate
   div.paginate.cf
     - if prev_page
-      p.paginate__parts.fl = link_to 'Previous', prev_page
+      = link_to 'Previous', prev_page, class: 'paginate__parts fl'
     - if next_page
-      p.paginate__parts.fr = link_to 'Next', next_page
+      = link_to 'Next', next_page, class: 'paginate__parts fr'
