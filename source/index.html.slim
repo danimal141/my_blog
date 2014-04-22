@@ -4,19 +4,13 @@ per_page: 8
 layout: layout
 ---
 
-- page_articles.each_with_index do |article, i|
-  ul.article
-    h2.article__title = link_to article.title, article
-    div.article__info.cf
-      time.article__date.fl datetime= article.date.strftime('%Y-%m-%d')
-        = article.date.strftime('%B %e, %Y')
-      ul.article__tags.fr
-        - article.tags.each do |tag|
-          li.fl = link_to tag, tag_path(tag)
-
+ul.article
+  - page_articles.each_with_index do |article|
+    li.article__item
+      = partial 'partials/article', locals: { article: article }
 - if paginate
-  div.paginate.cf
+  div.pagination.cf
     - if prev_page
-      = link_to 'Previous', prev_page, class: 'paginate__parts fl'
+      = link_to 'Previous', prev_page, class: 'pagination__parts fl'
     - if next_page
-      = link_to 'Next', next_page, class: 'paginate__parts fr'
+      = link_to 'Next', next_page, class: 'pagination__parts fr'

@@ -12,7 +12,7 @@ MAMPが起動しなくなって気が狂いそうになったり、適当に作�
 で、最近久しぶりにWordPressを使って簡単なWebサイトを作る機会があり、改めて触ってみると今は便利なものがいっぱいありますねー！！驚くほど開発がスムーズにできたので、今回はその時のことを備忘録がてら書いておきたいと思います。
 
 
-##イントロ的な
+###イントロ的な
 
 今回、使わせていただいたのはこちら
 
@@ -27,7 +27,7 @@ MAMPが起動しなくなって気が狂いそうになったり、適当に作�
 
 それではこれらを導入していく過程を順に書いていきますー。
 
-##導入
+###導入
 まずはVagrant, Virtual Box, Gruntを導入し、次にvagrant-chef-centos-wordpress、iemotoを導入していきます！
 
 ちなみに僕が今回使用したバージョンは↓です。
@@ -39,21 +39,21 @@ MAMPが起動しなくなって気が狂いそうになったり、適当に作�
 - Grunt 0.1.11
 
 
-###Vagrant
+####Vagrant
 [こちら](http://downloads.vagrantup.com/) からインストールしてください。
 
 `gem install vagrant`でもできるらしいのですが、なんか古いバージョンが入ってしまうなど問題があって非推奨ってどこかに書いてました。なので無難にdmgを入れましょー！
 
 
-###Virtual Box
+####Virtual Box
 [こちら](https://www.virtualbox.org/wiki/Downloads) からインストールしてください。
 
 
-###Grunt
+####Grunt
 以前書いた記事 [GruntでCSS、JSの圧縮をしてみた](http://dangerous-animal141.hatenablog.com/entry/2013/08/14/145033)を参考にしていただければと思いますm(_ _ )m
 
 
-###vagrant-chef-centos-wordpress
+####vagrant-chef-centos-wordpress
 
 [こちらのREADME](https://github.com/miya0001/vagrant-chef-centos-wordpress/blob/master/README-ja.md)に詳しく書いてくださっていますが、一応書いていきますー。
 
@@ -105,7 +105,7 @@ WordPressのデフォルトテーマの画面が表示されれば成功です�
 [こちらのコマンド一覧](http://wp-cli.org/commands/)を参考にぜひ使ってみてくださいー。僕は`wp db`でエクスポートとかをちょろっとしただけなので、正直あんまり使ってないですが。。
 
 
-### iemoto
+#### iemoto
 WordPressが導入できたので、いよいよテーマ開発をしていきます。
 
 WordPressにはデフォルトテーマ(twentyfourteenとかtwentythirteenとか)がすでに入ってますが、これは一からサイトを作る際に利用するには若干不便です。例えばデフォルトのCSSが効いてるせいで、スタイルの変更が効かずハマったり。。
@@ -170,7 +170,7 @@ style.cssとして一つにまとめられる
 
 
 
-##まとめ
+###まとめ
 
 - Vagrant, chef, wp-cliを使用して楽にWordPressの環境構築ができた。
 - Underscores＋Gruntで爆速で独自テーマを開発できる体制が整った。
@@ -181,7 +181,7 @@ style.cssとして一つにまとめられる
 小さなことからコツコツと。
 
 
-##参考記事
+###参考記事
 
 こちら参考にさせていただきました。ありがとうございました。
 
