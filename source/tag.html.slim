@@ -1,16 +1,1 @@
----
-pageable: true
-per_page: 8
-layout: layout
----
-
-ul.article
-  - page_articles.each_with_index do |article|
-    li.article__item
-      = partial 'partials/article', locals: { article: article }
-- if paginate
-  div.pagination.cf
-    - if prev_page
-      = link_to 'Previous', prev_page, class: 'pagination__parts fl'
-    - if next_page
-      = link_to 'Next', next_page, class: 'pagination__parts fr'
+index.html.slim
