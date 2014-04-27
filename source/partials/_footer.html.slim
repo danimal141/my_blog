@@ -8,3 +8,6 @@ footer.gl-footer.l-footer.cf
       = link_to 'Github', 'https://github.com/danimal141', target: '_blank'
     li.gl-footer__link__item.fl
       = link_to 'Feed', '/feed.xml', target: '_blank'
+
+- if current_article
+  = javascript_include_tag 'application'

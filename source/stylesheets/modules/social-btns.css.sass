@@ -1,0 +1,21 @@
+@import 'globals/all'
+
+ul.social-btns
+  margin-top: 3rem
+  padding-left: 0
+
+.social-btns__item
+  height:  27px
+  list-style: none
+  &:not(:last-child)
+    margin-right: 10px
+
+  // For FB button's bugs
+  // Refer to http://stackoverflow.com/questions/14358165/facebook-login-connect-button-rendering-in-chrome-fails
+  .fb_iframe_widget
+    span, iframe
+      width: 80px !important
+      height: 20px !important
+    span
+      vertical-align: baseline !important
+
