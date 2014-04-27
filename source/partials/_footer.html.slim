@@ -1,11 +1,10 @@
-footer.gl-footer
-  p
-    small ©2014 Hideaki Ishii All Right Reserved.
-/  nav
-/    ul.gl-header__link
-/      li.gl-header__link__item
-/        = link_to 'https://twitter.com/danimal141', target: '_blank'  do
-/          img src=image_path('icon_twitter.png') alt='twitter'
-/      li.gl-header__link__item
-/        = link_to 'https://github.com/dangerousanimal', target: '_blank' do
-/          img src=image_path('icon_github.png') alt='github'
+footer.gl-footer.l-footer.cf
+  p.fl
+    small ©2014 danimal141 All Right Reserved.
+  ul.gl-footer__link.fr
+    li.gl-footer__link__item.fl
+      = link_to 'Twitter', 'https://twitter.com/danimal141', target: '_blank'
+    li.gl-footer__link__item.fl
+      = link_to 'Github', 'https://github.com/danimal141', target: '_blank'
+    li.gl-footer__link__item.fl
+      = link_to 'Feed', '/feed.xml', target: '_blank'

@@ -67,6 +67,8 @@ GEM
       middleman-core (>= 3.0.0)
       net-sftp
       ptools
+    middleman-disqus (0.0.3)
+      middleman-core (>= 3.1.0)
     middleman-minify-html (3.1.1)
       middleman-core (~> 3.0)
     middleman-sprockets (3.3.2)
@@ -134,6 +136,7 @@ DEPENDENCIES
   middleman (~> 3.3.2)
   middleman-blog (~> 3.5.2)
   middleman-deploy
+  middleman-disqus
   middleman-minify-html
   middleman-syntax
   nokogiri

@@ -1,7 +1,15 @@
 @import 'globals/all'
 
 .gl-footer
-  padding: 1rem 0
   p
-    text-align: center
     color: $sol-base0
+
+.gl-footer__link
+  padding: 0
+  list-style: none
+
+.gl-footer__link__item
+  &:not(:first-child)
+    margin-left: 20px
+  a
+    display: block

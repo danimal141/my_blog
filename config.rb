@@ -73,6 +73,11 @@ activate :livereload
 # Syntax
 activate :syntax
 
+# Activate Disqus extension
+activate :disqus do |d|
+  d.shortname = 'danimal141'
+end
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper

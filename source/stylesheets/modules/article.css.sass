@@ -20,12 +20,13 @@
   color: $sol-base0
 
 .article__item__tag
-  @extend .article__date
+  @extend .article__item__date
   margin: 0
   li
     list-style: none
     &:not(:first-child)
       margin-left: 10px
-
   a
     color: $sol-base0
+    &:hover
+      color: $sol-yellow
