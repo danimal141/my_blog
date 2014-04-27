@@ -7,8 +7,11 @@ layout: layout
 ul.article
   - page_articles.each_with_index do |article|
     li.article__item
-      = partial 'partials/article', locals: { article: article }
-- if paginate
+      h2.article__item__title = link_to article.title, article
+      div.article__item__info.cf
+        time.article__item__date.fl datetime= article.date.strftime('%Y-%m-%d')
+          = article.date.strftime('%B %e, %Y')
+- if paginate && num_pages > 1
   div.pagination.cf
     - if prev_page
       = link_to 'Previous', prev_page, class: 'pagination__parts fl'

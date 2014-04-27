@@ -1,16 +1,16 @@
 @import 'globals/all'
 
 .article
+  margin: 0
   padding: 0
 
 .article__item
-  padding: 10px 0
   list-style: none
   &:not(:first-child)
-    margin-top: 2rem
+    margin-top: 3rem
 
 .article__item__info
-  margin-top: 1rem
+  margin-top: 10px
 
 .article__item__title
   font-size: 1.2rem
@@ -18,15 +18,3 @@
 .article__item__date
   font-size: 0.8rem
   color: $sol-base0
-
-.article__item__tag
-  @extend .article__item__date
-  margin: 0
-  li
-    list-style: none
-    &:not(:first-child)
-      margin-left: 10px
-  a
-    color: $sol-base0
-    &:hover
-      color: $sol-yellow

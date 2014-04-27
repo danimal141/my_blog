@@ -16,9 +16,6 @@ html
         div.article__item__info.cf
           time.article__item__date.fl datetime= current_article.date.strftime('%Y-%m-%d')
             = current_article.date.strftime('%B %e, %Y')
-          ul.article__item__tag.fr
-            - current_article.tags.each do |tag|
-              li.fl = link_to tag, tag_path(tag)
       div.article-content
         = yield
         div.social-btn.cf
