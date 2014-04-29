@@ -9,6 +9,9 @@ gem 'middleman-syntax'
 # For deploy
 gem 'middleman-deploy'
 
+# For GA
+gem 'middleman-google-analytics'
+
 # Use jquery
 gem 'jquery-middleman'
 

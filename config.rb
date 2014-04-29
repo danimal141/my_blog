@@ -2,22 +2,22 @@
 # Blog settings
 ###
 
-Time.zone = "Tokyo"
+Time.zone = 'Tokyo'
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  blog.prefix = "posts"
+  blog.prefix = 'posts'
   # blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  blog.layout = "posts"
+  blog.layout = 'posts'
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
-  blog.default_extension = ".md"
+  blog.default_extension = '.md'
 
   # blog.tag_template = "tag.html"
   #blog.calendar_template = "calendar.html"
@@ -28,7 +28,8 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
-page "/feed.xml", layout: false
+page '/feed.xml', layout: false
+page '/sitemap.xml', layout: false
 
 activate :directory_indexes
 
@@ -94,6 +95,15 @@ set :slim, { pretty: true, sort_attrs: false, format: :html5 }
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 
+# GA
+configure :development do
+  activate :google_analytics do |ga|
+    ga.tracking_id = false
+  end
+end
+
+configure :build do
+end
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -104,6 +114,11 @@ configure :build do
 
   # Minify HTML
   activate :minify_html, remove_quotes: false, remove_intertag_spaces: true
+
+  # GA
+  activate :google_analytics do |ga|
+    ga.tracking_id = 'UA-50475820-1'
+  end
 
   # Enable cache buster
   # activate :asset_hash
