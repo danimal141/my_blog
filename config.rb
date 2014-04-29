@@ -25,7 +25,7 @@ activate :blog do |blog|
   # Enable pagination
   blog.paginate = true
   blog.per_page = 8
-  # blog.page_link = "page/{num}"
+  blog.page_link = "page/{num}"
 end
 
 page '/feed.xml', layout: false
@@ -95,15 +95,6 @@ set :slim, { pretty: true, sort_attrs: false, format: :html5 }
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 
-# GA
-configure :development do
-  activate :google_analytics do |ga|
-    ga.tracking_id = false
-  end
-end
-
-configure :build do
-end
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -128,4 +119,12 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+# For Development Env
+# GA
+configure :development do
+  activate :google_analytics do |ga|
+    ga.tracking_id = false
+  end
 end
