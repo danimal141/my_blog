@@ -1,6 +1,6 @@
 - if current_article
     - title = "#{current_article.title} | #{data.site.title}"
-    - description = current_article.title
+    - description =strip_tags current_article.summary(150).gsub(/(\r\n|\r|\n)/, "")
     - url = current_article.url
     - type = 'article'
 - else
