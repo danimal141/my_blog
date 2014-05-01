@@ -49,8 +49,8 @@ end
 configure :build do
   activate :minify_css
   activate :minify_javascript
-  #activate :asset_hash
   activate :minify_html, remove_quotes: false, remove_intertag_spaces: true
+  activate :gzip
   activate :google_analytics do |ga|
     ga.tracking_id = 'UA-50475820-1'
   end
