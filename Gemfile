@@ -9,7 +9,6 @@ gem 'middleman-s3_sync'
 gem 'middleman-google-analytics'
 gem 'middleman-disqus'
 gem 'middleman-minify-html'
-gem 'jquery-middleman'
 
 gem 'slim'
 gem 'redcarpet'
