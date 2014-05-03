@@ -1,13 +1,14 @@
 - if current_article
     - title = "#{current_article.title} | #{data.site.title}"
-    - description =strip_tags current_article.summary(150).gsub(/(\r\n|\r|\n)/, "")
-    - url = current_article.url
+    - description = strip_tags current_article.summary(50).gsub(/(\r\n|\r|\n)/, "")
+    - url = "#{data.site.url}#{current_article.url}"
     - type = 'article'
 - else
     - title = data.site.title
     - description = data.site.description
     - url = data.site.url
     - type = 'blog'
+
 meta charset='UTF-8'
 meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'
 meta name='format-detection' content='telephone=no'
@@ -16,7 +17,14 @@ meta property='og:title' content=title
 meta property='og:url' content=url
 meta property='og:type' content=type
 meta property='og:description' content=description
-meta property='og:image' content='/images/ogp.png'
+meta property='og:image' content="#{data.site.url}/images/ogp.png"
+meta property='fb:admins' content='100002017939499'
+meta property='fb:app_id' content='196989540430862'
+meta name='twitter:card' content='summary'
+meta name='twitter:site' content='@danimal141'
+meta name='twitter:url' content=url
+meta name='twitter:title' content=title
+link rel='canonical' href=url
 title = title
 link rel='shortcut icon' href='/images/favicon.ico'
 link rel='apple-touch-icon-precomposed' href='/images/webclip.png'
