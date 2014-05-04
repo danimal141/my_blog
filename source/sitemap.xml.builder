@@ -1,11 +1,8 @@
 xml.instruct!
-xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
-  sitemap.resources.select { |page| page.path =~ /\.html/ }.each do |page|
+xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
+  sitemap.resources.each do |resource|
     xml.url do
-      xml.loc "#{data.site.url}/#{page.path}"
-      xml.lastmod Date.today.to_time.iso8601
-      xml.changefreq page.data.changefreq || "monthly"
-      xml.priority page.data.priority || "0.5"
-    end
+      xml.loc "#{data.site.url}#{resource.url}"
+    end if resource.destination_path =~ /\.html$/
   end
 end
