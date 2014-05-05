@@ -12,8 +12,7 @@ date: 2014-05-04
 
 これだけだとちょっと情報量がツラいので、軽くどんな感じでやったかも書いておきます。
 
-ちなみにソースもGithub上に置いてます。
-[danimal141/my_blog](https://github.com/danimal141/my_blog)
+ちなみにソースも[Github上](https://github.com/danimal141/my_blog)に置いてます。
 
 
 ### プロジェクト作成
@@ -21,18 +20,18 @@ date: 2014-05-04
 
 こんな感じでプロジェクトを作成して開発を進めていきます。
 
-    middleman init my_blog --template=blog
+    $ middleman init my_blog --template=blog
 
 
 あと自分はRubyのバージョン管理に`rbenv`を使ってるんですけど、毎回`bundle exec`つけてコマンド叩くのはウザいので、`rbenv-binstubs`を入れて初回の`bundle install`時に
 
-    bundle install --binstubs=bin
+    $ bundle install --binstubs=bin
 
 みたいにしました。
 
 `rbenv-binstubs`は
 
-    brew install rbenv-binstubs
+    $ brew install rbenv-binstubs
 
 で入手できます。[こちらの記事](http://qiita.com/naoty_k/items/9000280b3c3a0e74a618)を真似しただけです、はい。
 
@@ -46,8 +45,8 @@ templateは`slim`一択。設定はググれば情報出てくると思います
 自分は[こちらの記事](http://re-dzine.net/2014/01/middleman-slim/)を参考にさせて頂きました。
 
 CSSはできるだけ記述少なくしたかったので`sass`使ってます。
-あと最近よく聞く[`SMACSS`](http://smacss.com/), [`BEM`](http://bem.info/)を意識するようにしてみました。
-ファイル構成はこんなかんじで、`SMACSS`ぽく役割分担。`application.css.sass`で全部importするので基本partial。
+あと最近よく聞く[SMACSS](http://smacss.com/), [BEM](http://bem.info/)を意識するようにしてみました。
+ファイル構成はこんなかんじで、SMACSSぽく役割分担。`application.css.sass`で全部importするので基本partial。
 
     ./source/stylesheets
     ├── _base.css.sass
@@ -65,8 +64,8 @@ CSSはできるだけ記述少なくしたかったので`sass`使ってます�
         └── _social-btns.css.sass
 
 
-クラスの命名規則はなるべく`BEM`に準拠するようにしてます。`.article`のElementは`.article__item`みたいな。
-正直、今回わざわざ`BEM`導入するような規模じゃないんですけど`BEM`依存症の自分は気づいたらこの命名規則になってました。もっと`BEM`極めたい。
+クラスの命名規則はなるべくBEMに準拠するようにしてます。`.article`のElementは`.article__item`みたいな。
+正直、今回わざわざBEM導入するような規模じゃないんですけどBEM依存症の自分は気づいたらこの命名規則になってました。もっとBEM極めたい。
 
 ちなみにデザイン考えるのはキツかったので、自分がエディタのカラースキームに使ってる`solarized`の色をそのまま[ここ](http://thomasf.github.io/solarized-css/)から拝借して使いました。デザイン自分でするのはツラいって人にオススメ。
 
@@ -93,7 +92,7 @@ CSSはできるだけ記述少なくしたかったので`sass`使ってます�
 とりあえずFacebook、Twitter、はてブのボタンを設置しました。
 
 FB用に基本的なOGPタグも設定して、[debugger](https://developers.facebook.com/tools/debug/)でアラートが出ないかだけ軽くチェック（なんかバグってたら教えてください。。）
-あと最近はTwitterもFBのOGPと似た`twitter:cards`なるものを設定できるらしいので[こちらの記事](http://smmlab.aainc.co.jp/?p=18753)を参考に設定してみました。
+あと最近はTwitterもFBのOGPと似た`twitter:cards`なるものを設定できるらしいので、[こちらの記事](http://smmlab.aainc.co.jp/?p=18753)を参考に設定してみました。
 
 ####問題点
 FBのlikeボタンなんですが、ブラウザの`history back`でページを行ったり来たりしてるとボタンが崩れ、`fb:like failed to resize in 45s`というエラーメッセージとともにボタンが45秒後に消え失せるバグが発生しました。(これchromeだけかも)
@@ -150,7 +149,7 @@ FBのlikeボタンなんですが、ブラウザの`history back`でページを
 [こちらの記事](http://11dax.com/google-analytics-2-460.html)を参考にさくっと設定しました。
 
 ### sitemap.xmlの作成
-GAの設定につづいて[ウェブマスターツール](https://www.google.com/webmasters/tools/home?hl=ja)の設定をしました。`sitemap.xml`を作成して登録しなければいけないので作成します。
+GAの設定につづいて[ウェブマスターツール](https://www.google.com/webmasters/tools/home?hl=ja)の設定をしました。`sitemap.xml`を登録しなければいけないので作成します。
 
 [`middleman-sitemap`](https://github.com/pixelpark/middleman-sitemap)と[こちらの記事](http://qiita.com/youcune/items/71e18e7bd5219b4a07f8)を参考にこんな感じで作成しました。
 
