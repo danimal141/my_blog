@@ -9,6 +9,8 @@
 
 # Ignore the build directory
 /build
+
+# Ignore bin
 /bin
 
 # Ignore cache
