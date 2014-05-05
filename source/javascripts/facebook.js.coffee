@@ -9,8 +9,9 @@ loadFacebookSDK = ->
 
 initializeFacebookSDK = ->
   FB.init
-    appId     : '196989540430862'
+    appId     : '1413637072244383'
     channelUrl: 'http://danimal141.net'
     status    : true
     cookie    : true
     xfbml     : true
+    version   : 'v2.0'
