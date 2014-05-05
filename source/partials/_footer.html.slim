@@ -1,6 +1,9 @@
 footer.gl-footer.l-footer.cf
   p.fl
-    small ©2014 danimal141 All Right Reserved.
+    small
+      | ©#{Time.now.year}
+      = link_to ' danimal141 ', '/'
+      | All Right Reserved.
   ul.gl-footer__link.fr
     li.gl-footer__link__item.fl
       = link_to 'Twitter', 'https://twitter.com/danimal141', target: '_blank'
