@@ -85,6 +85,7 @@ I understandしてしばらく待つとユーザー名の変更が完了しま�
     $ git remote set-url origin git@github.com:new_name/dotfiles
 
     $ cd ~
+    $ homesick pull
     $ homesick symlink dotfiles
 
     # 設定できてるか確認
