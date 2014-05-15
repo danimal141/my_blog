@@ -3,7 +3,7 @@ title: Homebrewで特定バージョンのformulaに切り替える方法
 date: 2014-05-14
 ---
 
-Homebrewで古いバージョンの`imagemagick`を入れる必要性に迫られたのでメモです。
+Homebrewで古いバージョンの`imagemagick`を入れる必要に迫られたのでメモです。
 
 ###現状確認
 まず`brew update`をしてhomebrewをアップデートして、現状確認。
