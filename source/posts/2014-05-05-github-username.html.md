@@ -14,16 +14,16 @@ date: 2014-05-05
 ユーザー名の変更自体は簡単です。
 [Github](https://github.com/)の自分のプロフィールページにアクセスして、以下のどちらかをクリックすればプロフィール編集画面にいけます。
 
-![change_github_name1](images/2014/05/05/change_github_name1.png)
+![github_username1](images/2014/05/05/github_username1.png)
 
 んで、そこからAccount Settings → change usernameでユーザー名を変更するだけ。
 変更自体は簡単です。
 
-![change_github_name2](images/2014/05/05/change_github_name2.png)
+![github_username2](images/2014/05/05/github_username2.png)
 
 ここで怖いポップアップが出てくるのですが、逃げてはいけません。
 
-![change_github_name3](images/2014/05/05/change_github_name3.png)
+![github_username3](images/2014/05/05/github_username3.png)
 
 別にリポジトリもGistも消されたりはしません。
 ただ「お前のリポジトリのリダイレクトはしゃーなし設定してやるけど、お前の旧プロフィールページとか他のページはどうなっても知らねえよ？」って言われてるだけです。逃げちゃだめだ。
