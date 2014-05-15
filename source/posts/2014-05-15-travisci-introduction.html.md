@@ -54,7 +54,7 @@ languageを`Ruby`に指定。
 
 ###build passing的な画像をREADMEに貼る
 
-画像は`https://travis-ci.org/Githubのユーザー名/リポジトリ名`のちょうど右上に画像が表示されてます。
+`https://travis-ci.org/Githubのユーザー名/リポジトリ名`のちょうど右上に画像が表示されてます。
 
 ![travisci_introduction1](images/2014/05/15/travisci_introduction1.png)
 
