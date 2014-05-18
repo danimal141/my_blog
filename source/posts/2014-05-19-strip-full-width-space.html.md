@@ -3,7 +3,7 @@ title: Railsのbefore_validationで文字列の先頭、末尾にある全角ス
 date: 2014-05-19
 ---
 
-`Strip#strip`を使うだけでは半角スペースとか改行文字しか取り除けないので、before_validation時に全角スペースを取り除く方法を考える。
+`Strip#strip`を使うだけでは半角スペースとか改行文字しか取り除けないので、`before_validation`時に全角スペースを取り除く方法を考える。
 
 ちなみにRubyは2.1.2、Railsは4.1.0を前提に書いてます。
 
@@ -45,7 +45,7 @@ Gemfileに書いて、`bundle install`する。
       end
     end
 
-`set_filter strip_full_width_space: false do`のとこでデフォルト`false`でフィルターを追加する。指定時に`strip_full_width_space: true`にしてやればセットできるようになる。(`auto_strip_attributes.rb`に`next unless options[filter_name]`って書いてあって、`false`の場合は飛ばされてる）
+`set_filter strip_full_width_space: false do`のとこでデフォルト`false`でフィルターを追加する。実際に使いたいところで`strip_full_width_space: true`にしてやればセットできるようになる。
 
 `value.remove`は[`active_support/core_ext/string/filters.rb`](https://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/string/filters.rb)に書いてあるやつ。`gsub pattern, ''`をちょっと短く書ける。
 
@@ -65,7 +65,7 @@ Gemfileに書いて、`bundle install`する。
 ###まとめ
 わざわざgemいれなくてもできそうですが、こんな感じで全角スペースの削除ができました。
 
-`auto_strip_attributes.rb`のコードは短くて読みやすかったのでRubyの勉強にもなりました。
+`auto_strip_attributes.rb`のコードは短くて（80行ぐらい）読みやすかったのでRubyの勉強にも良いと思います。おすすめ。
 
 ###参考
 - [holli/auto\_strip\_attributes](https://github.com/holli/auto_strip_attributes)
