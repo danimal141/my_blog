@@ -42,7 +42,7 @@ date: 2014-05-05
 
 I understandしてしばらく待つとユーザー名の変更が完了します。
 
-###`git config user.name`の設定
+###git config user.nameの設定
 自分のPC側でgitのユーザー名を設定している場合はこちらも変更しておきます。
 
     $ git config --global user.name 'new_username'
@@ -55,7 +55,7 @@ I understandしてしばらく待つとユーザー名の変更が完了しま�
 
 [Github Help](https://help.github.com/articles/setting-your-username-in-git)もあるので参考にしてみてください。
 
-###過去に`git clone`したローカルのリポジトリ達のケア
+###過去にgit cloneしたローカルのリポジトリ達のケア
 これは数が多い場合はだるいですが、やること自体は簡単です。
 
     $ cd ローカルリポジトリ

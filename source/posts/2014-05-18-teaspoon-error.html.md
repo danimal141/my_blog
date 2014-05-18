@@ -2,6 +2,7 @@
 title: Rails4.1プロジェクトにteaspoon入れたらエラー出たので調査した
 date: 2014-05-18
 ---
+
 Rails4.1のプロジェクトで`JavaScript`のテストをするために[`teaspoon`](https://github.com/modeset/teaspoon)を入れたらうまく動かなかったので調査。
 
 Rails4.0で入れたときは問題なかったのに…ツラい。
