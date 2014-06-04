@@ -12,7 +12,7 @@ footer.gl-footer.l-footer.cf
     li.gl-footer__link__item.fl
       = link_to 'Feed', '/feed.xml', target: '_blank'
 
-= google_analytics_tag
+= google_analytics_universal_tag
 - if current_article
   = javascript_include_tag 'application'
   javascript:
