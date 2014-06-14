@@ -7,7 +7,7 @@ date: 2014-05-19
 
 ちなみにRubyは2.1.2、Railsは4.1.0を前提に書いてます。
 
-###auto\_strip\_attributesの導入
+### auto\_strip\_attributesの導入
 [`auto_strip_attributes`](https://github.com/holli/auto_strip_attributes)というgemがあったのでとりあえず使ってみる。
 
 Gemfileに書いて、`bundle install`する。
@@ -30,10 +30,8 @@ Gemfileに書いて、`bundle install`する。
 
 これだけでとりあえず半角スペースとかは消せそう。便利！でも全角スペースは消せない。
 
-###strip\_full\_width\_spaceフィルターを追加する
+### strip\_full\_width\_spaceフィルターを追加する
 [lib/auto\_strip\_attributes.rb](https://github.com/holli/auto_strip_attributes/blob/master/lib/auto_strip_attributes.rb)をみた感じ、`set_filter`で独自フィルターをつくって`setup`で追加できるっぽかったのでつくってみる。
-
-ちょうど[こちら](http://d.hatena.ne.jp/ria10/20131019/1382169233)で「まさにこれです！」って感じの実装されている方がいたので参考にさせていただきました。
 
 `config/initializers/`に`auto_strip_attributes.rb`をつくって以下のようにする。
 
@@ -53,7 +51,7 @@ Gemfileに書いて、`bundle install`する。
 
 `[\s　]`は半角スペースOR全角スペースどちらかにマッチ。カッコ内のどれか一文字という意味になる。（この場合、半角スペースは要らないか。。）
 
-###モデル側でフィルターを使用する
+### モデル側でフィルターを使用する
     class User < ActiveRecord::Base
 
       auto_strip_attributes :nick, :comment, strip_full_width_space: true
@@ -62,12 +60,12 @@ Gemfileに書いて、`bundle install`する。
 
 これで例えば`:nick`が`　ほげ　`とかだったらちゃんと`ほげ`にしてくれる。
 
-###まとめ
+### まとめ
 わざわざgemいれなくてもできそうですが、こんな感じで全角スペースの削除ができました。
 
 `auto_strip_attributes.rb`のコードは短くて（80行ぐらい）読みやすかったのでRubyの勉強にも良いと思います。おすすめ。
 
-###参考
+### 参考
 - [holli/auto\_strip\_attributes](https://github.com/holli/auto_strip_attributes)
 
 - [Railsでバリデーション前に文字列の前後のスペースやタブを取り除くメモ](http://d.hatena.ne.jp/ria10/20131019/1382169233)

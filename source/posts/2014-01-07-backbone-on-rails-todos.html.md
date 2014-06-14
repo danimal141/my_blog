@@ -5,13 +5,13 @@ date: 2014-01-07
 
 今回はbackbone.jsのサンプルとして有名なTodoアプリをサーバーサイドにRailsを使って作り直してみたいと思います！
 
-###ソースコード
+### ソースコード
 コードは[こちら](https://github.com/danimal141/bor_todos)に公開しております↓
 
-###実装
+### 実装
 では早速どんなふうに作っていったかを備忘録がてら書いていきたいと思います！！
 
-####準備
+#### 準備
 
 今回は
 
@@ -95,7 +95,7 @@ Scssは書くのだるかったので、もともとのTodosのCSSをScssだと�
 
 とりあえずこれでrootが表示されました！
 
-####API
+#### API
 
 続いて実際にTodoの情報を返すAPIを作成します。持つのはcontent（内容）とdone（完了フラグ）のみ。
 
@@ -162,7 +162,7 @@ APIっぽくしたいからroutes.rb修正（/api/todos にしたい）
 
 この時点でサンプルデータをseed.rbに入れて`rake db:seed`して、`localhost:3000/api/todos.json`からデータ返ってきてたらOKです。
 
-####Backbone.js
+#### Backbone.js
 
 いよいよBackbone.js側の実装に入ります。
 
@@ -428,7 +428,7 @@ app/assets/templates/todos/item.jst.eco
 これでひと通り実装が完成しました！！
 
 
-##まとめ
+### まとめ
 - RailsとBackbone.jsの連携のやり方（backbone-on-railsの使い方）がわかった。
 
 - Backboneのfetchが変わってて焦った。`reset: true`必要。
@@ -445,7 +445,7 @@ app/assets/templates/todos/item.jst.eco
 
 Railsで勉強したことに関する記事もまた書きたいと思います。
 
-#参考記事
+### 参考
 こちら参考にさせていただきました。ありがとうございました。
 
 - [Rails3.2とBackbone.jsでToDoアプリを作ってみた～backbone-on-rails](http://blog.scimpr.com/2013/01/13/rails3-2%E3%81%A8backbone-js%E3%81%A7todo%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%EF%BD%9Ebackbone-on-rails/)

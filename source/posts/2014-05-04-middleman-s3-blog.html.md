@@ -15,7 +15,7 @@ date: 2014-05-04
 ちなみにソースも[Github上](https://github.com/danimal141/my_blog)に置いてます。
 
 
-###プロジェクト作成
+### プロジェクト作成
 [ここ](http://middlemanapp.com/jp/basics/blogging/)見ながら進めれば問題ないかと思われます。
 
 こんな感じでプロジェクトを作成して開発を進めていきます。
@@ -35,12 +35,12 @@ date: 2014-05-04
 
 で入手できます。[こちらの記事](http://qiita.com/naoty_k/items/9000280b3c3a0e74a618)を真似しただけです、はい。
 
-###タスク管理
+### タスク管理
 一人で開発するとはいえ、それなりに対応することも多かったのでタスク管理に[`trello`](https://trello.com/)を使用しました。
 
 Todoを列挙して、対応中のものはDoing、対応済みのものはDoneといった具合にシンプルなタスク管理ができるので一人とか小規模で開発するときにわりとオススメです。
 
-###template、CSSについて
+### template、CSSについて
 templateは`slim`一択。設定はググれば情報出てくると思います。
 自分は[こちらの記事](http://re-dzine.net/2014/01/middleman-slim/)を参考にさせて頂きました。
 
@@ -69,7 +69,7 @@ CSSはできるだけ記述少なくしたかったので`sass`使ってます�
 
 ちなみにデザイン考えるのはキツかったので、自分がエディタのカラースキームに使ってる`solarized`の色をそのまま[ここ](http://thomasf.github.io/solarized-css/)から拝借して使いました。デザイン自分でするのはツラいって人にオススメ。
 
-###コメント欄の設置
+### コメント欄の設置
 迷わず[`disqus`](http://disqus.com/)を使いました。ユーザー登録を済ませたら、あとは[`middleman-disqus`](https://github.com/simonrice/middleman-disqus)というgemがあったのでこいつを追加
 
     gem 'middleman-disqus'
@@ -88,13 +88,13 @@ CSSはできるだけ記述少なくしたかったので`sass`使ってます�
 
 これに関しては[こちらの記事](http://nmbr8.com/blog/2014/02/23/middleman_foundation_s3-7/)が激アツでした。ありがとうございます！！
 
-###ソーシャルボタンの設置
+### ソーシャルボタンの設置
 とりあえずFacebook、Twitter、はてブのボタンを設置しました。
 
 FB用に基本的なOGPタグも設定して、[debugger](https://developers.facebook.com/tools/debug/)でアラートが出ないかだけ軽くチェック（なんかバグってたら教えてください。。）
 あと最近はTwitterもFBのOGPと似た`twitter:cards`なるものを設定できるらしいので、[こちらの記事](http://smmlab.aainc.co.jp/?p=18753)を参考に設定してみました。
 
-####問題点
+#### 問題点
 FBのlikeボタンなんですが、ブラウザの`history back`でページを行ったり来たりしてるとボタンが崩れ、`fb:like failed to resize in 45s`というエラーメッセージとともにボタンが45秒後に消え失せるバグが発生しました。(これchromeだけかも)
 
 回避策として以下のように`facebook.js.coffee`を作成して、
@@ -123,7 +123,7 @@ FBのlikeボタンなんですが、ブラウザの`history back`でページを
 余談ですが、たかがFacebookのscriptロードするためだけに`jquery`をまるごと読み込むのは悔しいです。
 そこで[`jquery-builder`](http://projects.jga.me/jquery-builder/)をつかって`ajax`に必要な部分のみをダウンロードし、そいつを`application.js`からrequireするようにしました。サイズ大分違ってくると思うのでオススメ。
 
-###Google Analyticsの導入
+### Google Analyticsの導入
 まず[`本家`](http://www.google.com/analytics/)にログインして自分のサイトを登録。
 で、[`middleman-google-analytics`](https://github.com/danielbayerlein/middleman-google-analytics)というgemがあるのでそいつを入れてREADMEの通りに`config.rb`に設定を記述。
 
@@ -148,7 +148,7 @@ FBのlikeボタンなんですが、ブラウザの`history back`でページを
 あとこれは実際にサイトを運営し始めてからになると思いますが、自分のアクセスが毎回カウントされるのはツラいので自分のアクセスを除外する設定をGA側で設定します。
 [こちらの記事](http://11dax.com/google-analytics-2-460.html)を参考にさくっと設定しました。
 
-###sitemap.xmlの作成
+### sitemap.xmlの作成
 GAの設定につづいて[ウェブマスターツール](https://www.google.com/webmasters/tools/home?hl=ja)の設定をしました。`sitemap.xml`を登録しなければいけないので作成します。
 
 [`middleman-sitemap`](https://github.com/pixelpark/middleman-sitemap)と[こちらの記事](http://qiita.com/youcune/items/71e18e7bd5219b4a07f8)を参考にこんな感じで作成しました。
@@ -171,19 +171,19 @@ GAの設定につづいて[ウェブマスターツール](https://www.google.co
     Sitemap: http://danimal141.net/sitemap.xml
 
 
-###デプロイ
+### デプロイ
 今回、自分は[AWS](https://aws.amazon.com/jp/)のS3でホスティング、[お名前.com](http://www.onamae.com/)でドメインをとってそれをRoute53で管理する感じで運営しています。
 この設定に関しては[こちらの記事](http://nmbr8.com/blog/2014/03/26/middleman_foundation_s3-9/)がもはやすべてを物語っていたので、これを参考にすれば十分かと。
 
 ただお名前⇔Route53間の設定は上記の記事で書かれていなかったので、[こちらの記事](http://tech.tanaka733.net/entry/2013/09/15/%E3%81%8A%E5%90%8D%E5%89%8D.com_%E3%81%A7%E5%8F%96%E3%81%A3%E3%81%9F%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%82%92_Amazon_Route53%E3%81%A7%E7%AE%A1%E7%90%86%E3%81%97%E3%80%81%E3%82%B5%E3%83%96%E3%83%89)を参考にしました。
 
-###まとめ
+### まとめ
 以上ざっくりですが、`middleman`を使ったブログ開発について書いてみました。
 細かいとこ大分端折ってますが、`middleman`はわりと使っている方も多く、調べれば情報はそれなりに出てくるのでそこまで苦労しないかと思われます（Facebookのバグとか対応しきれてないけど。。）
 
 今後はこちらでブログを更新していこうと思いますので、何卒よろしくお願いします<(_ _)>
 
-###参考
+### 参考
 
 - [Middleman ブログ機能](http://middlemanapp.com/jp/basics/blogging/)
 - [bundle execを使わずに済む方法（rbenv編）](http://qiita.com/naoty_k/items/9000280b3c3a0e74a618)

@@ -10,7 +10,7 @@ MAMPが起動しなくなって気が狂いそうになったり、適当に作�
 
 で、最近久しぶりにWordPressを使って簡単なWebサイトを作る機会があり、改めて触ってみると今は便利なものがいっぱいありますねー！！驚くほど開発がスムーズにできたので、今回はその時のことを備忘録がてら書いておきたいと思います。
 
-###イントロ的なやつ
+### イントロ的なやつ
 
 今回、使わせていただいたのはこちら
 
@@ -24,7 +24,7 @@ MAMPが起動しなくなって気が狂いそうになったり、適当に作�
 
 それではこれらを導入していく過程を順に書いていきますー。
 
-###導入
+### 導入
 まずはVagrant, Virtual Box, Gruntを導入し、次にvagrant-chef-centos-wordpress、iemotoを導入していきます！
 
 ちなみに僕が今回使用したバージョンは↓です。
@@ -35,20 +35,20 @@ MAMPが起動しなくなって気が狂いそうになったり、適当に作�
 
 - Grunt 0.1.11
 
-####Vagrant
+#### Vagrant
 [こちら](http://downloads.vagrantup.com/) からインストールしてください。
 
 `gem install vagrant`でもできるらしいのですが、なんか古いバージョンが入ってしまうなど問題があって非推奨ってどこかに書いてました。なので無難にdmgを入れましょー！
 
 
-####Virtual Box
+#### Virtual Box
 [こちら](https://www.virtualbox.org/wiki/Downloads) からインストールしてください。
 
 
-####Grunt
+#### Grunt
 以前書いた記事 [GruntでCSS、JSの圧縮をしてみた](http://dangerous-animal141.hatenablog.com/entry/2013/08/14/145033)を参考にしていただければと思います。
 
-####vagrant-chef-centos-wordpress
+#### vagrant-chef-centos-wordpress
 [こちらのREADME](https://github.com/miya0001/vagrant-chef-centos-wordpress/blob/master/README-ja.md)に詳しく書いてくださっていますが、一応書いていきますー。
 
 まずはvagrant-hostsupdaterをインストール。
@@ -152,7 +152,7 @@ CSSは最終的にはstyle.cssを使用することになっているので、�
 
 .gitignoreもあらかじめwordpressフォルダやgrunt-initしたテーマフォルダ内に用意されています。
 
-###まとめ
+### まとめ
 
 - Vagrant, chef, wp-cliを使用して楽にWordPressの環境構築ができた。
 - Underscores＋Gruntで爆速で独自テーマを開発できる体制が整った。
@@ -160,7 +160,7 @@ CSSは最終的にはstyle.cssを使用することになっているので、�
 
 昔の苦労が嘘のように楽しく開発できました。こんな便利なものを作ってくれた方々に本当感謝します。
 
-###参考記事
+### 参考
 
 こちら参考にさせていただきました。ありがとうございました。
 

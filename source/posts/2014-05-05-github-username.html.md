@@ -10,7 +10,7 @@ date: 2014-05-05
 - 今まで作成したGithubのリポジトリやGistはどうなるのか
 - homesick+Githubで管理してるdotfilesはどうなるのか
 
-###とりあえずユーザー名を変更してみる
+### とりあえずユーザー名を変更してみる
 ユーザー名の変更自体は簡単です。
 [Github](https://github.com/)の自分のプロフィールページにアクセスして、以下のどちらかをクリックすればプロフィール編集画面にいけます。
 
@@ -42,7 +42,7 @@ date: 2014-05-05
 
 I understandしてしばらく待つとユーザー名の変更が完了します。
 
-###git config user.nameの設定
+### git config user.nameの設定
 自分のPC側でgitのユーザー名を設定している場合はこちらも変更しておきます。
 
     $ git config --global user.name 'new_username'
@@ -55,7 +55,7 @@ I understandしてしばらく待つとユーザー名の変更が完了しま�
 
 [Github Help](https://help.github.com/articles/setting-your-username-in-git)もあるので参考にしてみてください。
 
-###過去にgit cloneしたローカルのリポジトリ達のケア
+### 過去にgit cloneしたローカルのリポジトリ達のケア
 これは数が多い場合はだるいですが、やること自体は簡単です。
 
     $ cd ローカルリポジトリ
@@ -74,7 +74,7 @@ I understandしてしばらく待つとユーザー名の変更が完了しま�
 
 これで`git fetch`とか`git push`が問題なくできればOKです。
 
-###homesickの再設定
+### homesickの再設定
 自分は`.vimrc`やら`.zshrc`やらの設定ファイルを[`homesick`](https://github.com/technicalpickles/homesick)を使って管理しているのですが、こいつも設定し直さないといけません。`homesick`の使い方は[こちらの記事](http://qiita.com/s_tomoyuki/items/650ff995e6906bdecc17)とかを参考にしてみてください。
 
 ここからが本題の再設定（といっても先ほどと同じことするだけですが）。`~/.homesick/repos/dotfiles`に`homesick clone`したリポジトリがあります。`homesick clone`とはいえ所詮`git clone`なので先ほどと同じようにremoteのurlを設定します。
@@ -100,10 +100,10 @@ I understandしてしばらく待つとユーザー名の変更が完了しま�
 
 するのもありかと思いますが、一旦設定が消えてツラかったり、初期に設定されるremoteのurlが`ssh`のものではなく`https`のものだったりするので普通に`git remote set-url`するほうがいいと思います。
 
-###まとめ
+### まとめ
 こんな感じでサクッと変更できるので、ダサいユーザー名つけて激しく後悔してる人はぜひかっこいいユーザー名に変更してみてください。
 
-###参考
+### 参考
 
 - [Setting your username in git | Github Help](https://help.github.com/articles/setting-your-username-in-git)
 - [homesick を使って dotfiles を管理する！](http://qiita.com/s_tomoyuki/items/650ff995e6906bdecc17)

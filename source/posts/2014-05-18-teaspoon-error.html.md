@@ -7,7 +7,7 @@ Rails4.1のプロジェクトで`JavaScript`のテストをするために[`teas
 
 Rails4.0で入れたときは問題なかったのに…ツラい。
 
-###準備
+### 準備
 まずは`Gemfile`に記述して
 
     group :development, :test do
@@ -30,7 +30,7 @@ Rails4.0で入れたときは問題なかったのに…ツラい。
 
 余談ですが`Gemfile`で`group :development, :test do`ではなく、`group :test do`の中に書いていた場合、`undefined method 'setup' for Teaspoon:Module (NoMethodError)`とか出ると思うので注意。この[issue#96](https://github.com/modeset/teaspoon/issues/96)のやつです。今回テーマとしてるエラーとは別物。
 
-###エラー発生
+### エラー発生
 `config/initializers/teaspoon.rb`や`spec/teaspoon_env.rb`なども特に変更せず、`teaspoon`と打ってみたところこんな感じになりました。
 
     $ teaspoon
@@ -55,7 +55,7 @@ Why？なぜprecompileの設定をせねばいかんのですか。
 
 結局、合計10ファイル程度をprecompileの対象に追加したらやっとテストが動きました。なんだこれは…Rails4.0でいれたときはこんなことなかったぞ。
 
-##とりあえずの対応
+### とりあえずの対応
 
 同じようなエラーハマった人いないかググったらどんぴしゃな[issue#197](https://github.com/modeset/teaspoon/issues/197)を発見しました。これです、これ！！
 
@@ -90,12 +90,12 @@ Contributerの方も「Can you explain why you have dev/test set to precompile -
 
 ちなみに`.travis.yml`にも`bundle exec teaspoon`を追加して実行してみたのですが問題なく動きました。
 
-###まとめ
+### まとめ
 さきほどのissue#197も2014年5月18日現在、open状態なのでまだ解決してない問題かと思われます。やはりRailsはアップデートが頻繁なのでこういうのがツラいですね。引き続きissueやpull-reqなど動向をチェックしていこうと思います。[それっぽいpull-req](https://github.com/modeset/teaspoon/pull/206)は既に出てるくさいんですけどね。レビューはよ。
 
 ひとまず現時点でテストできなくて困ってる人がもしいたら、この方法で一応実行はできるよーっていう共有でした。
 
-###参考
+### 参考
 - [modeset/teaspoon Teaspoon missing setup method in Teaspoon:Module? #96](https://github.com/modeset/teaspoon/issues/96)
 
 - [modeset/teaspoon Error: Sprockets::Rails::Helper::AssetFilteredError #197](https://github.com/modeset/teaspoon/issues/197)
